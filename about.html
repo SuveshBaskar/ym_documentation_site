@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <!-- Cod Box Copy begin -->
+    <link href="prism/prism.css" rel="stylesheet" />
+    <link href="code-box-copy/css/code-box-copy.css" rel="stylesheet" />
+
+    <!-- Cod Box Copy end -->
+  </head>
+  <body>
+    <div class="code-box-copy">
+      <button
+        class="code-box-copy__btn"
+        data-clipboard-target="#code-snippet1"
+        title="Copy"
+      ></button>
+      <pre><code class="language-js" id="code-snippet1">console.log(value1+value2)</code></pre>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="prism/prism.min.js"></script>
+    <script src="clipboard/clipboard.min.js"></script>
+    <script src="code-box-copy/js/code-box-copy.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.code-box-copy').codeBoxCopy({
+          tooltipText: 'Copied',
+          tooltipShowTime: 1000,
+          tooltipFadeInTime: 300,
+          tooltipFadeOutTime: 300
+        });
+      });
+    </script>
+  </body>
+</html>
